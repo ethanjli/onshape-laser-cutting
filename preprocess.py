@@ -45,7 +45,7 @@ def convert(dxf_path: str, svg_path: str) -> None:
 
     Args:
         dxf_path: a file path to a dxf file. Must have '.dxf' as its file
-        extension.
+            extension.
         svg_path: a file path to the svg file to create.
     """
     subprocess.run(['inkscape', '-l', svg_path, dxf_path])
@@ -58,7 +58,7 @@ def style_strokes(svg_path: str, stroke_color: str='#ff0000',
         svg_path: a file path to the svg file to modify and overwrite.
         stroke_color: the color, as a hex code, to set paths to.
         stroke_width: the stroke width, in pixels (at 96 pixels per inch), to
-        set paths to.
+            set paths to.
 
     Returns:
         The modified XML tree.
@@ -80,7 +80,7 @@ def preprocess(dxf_path: str, svg_path: str=None) -> None:
     Args:
         dxf_path: the path of the dxf file to preprocess. Must end in '.dxf'.
         svg_path: the path of the file to save the preprocessed svg result.
-        Defaults to dxf_path, but ending in '.svg' instead of '.dxf'.
+            Defaults to dxf_path, but ending in '.svg' instead of '.dxf'.
 
     Raises:
         FileTypeError: if dxf_path does not end in '.dxf'.
@@ -106,12 +106,12 @@ def main(input_path: str, output_path: str) -> None:
 
     Args:
         dxf_path: the path of the dxf file to preprocess, or the directory
-        containing the dxf files to preprocess.
+            containing the dxf files to preprocess.
         svg_path: the path of the file to save the preprocessed svg result, or
-        the path of the directory of the files to save the preprocessed svg
-        results. If dxf_path is a single file, defaults to dxf_path, but with a
-        '.svg' file extension instead of '.dxf'. If dxf_path is a directory,
-        defaults to dxf_path.
+            the path of the directory of the files to save the preprocessed svg
+            results. If dxf_path is a single file, defaults to dxf_path, but
+            with a '.svg' file extension instead of '.dxf'. If dxf_path is a
+            directory, defaults to dxf_path.
     """
     input_ext = get_file_ext(input_path)
     if input_ext:
