@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Vim swapfiles
+*.swp
+*.swo
+
+# Laser cutting designs
+designs
